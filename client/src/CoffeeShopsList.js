@@ -79,8 +79,19 @@ class CoffeeShopsList extends Component {
                 <Button color="success" tag={Link} to="/coffee-shops/new">Add New</Button>
             </div>
             {errorMessage ?
+                <div className="d-flex flex-row justify-content-center">
+                    <Alert color="warning" style={{flex: 1, maxWidth: `80%`}}>{errorMessage}</Alert>
+                </div> : null
             }
+            <div className="d-flex flex-row flex-container flex-wrap justify-content-center">
+                { coffeeShops.map( coffeeShop =>
+                    <CoffeeShop {...coffeeShop} remove={this.remove.bind(this)} key={{coffeeShop:id}}/>
+                )}
+                {!coffeeShops || coffeeShops.length === 0 ? <p> No coffee shops! </p> : null}
+            </div>
         </div>
-    )
+    );
     }
 }
+
+export default CoffeeShopsList;
