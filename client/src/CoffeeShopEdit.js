@@ -106,7 +106,7 @@ class CoffeeShopEdit extends Component {
                             <FormGroup className="col-md-4 mb-3">
                                 <Label for="internetReliability">Internet Reliability</Label>
                                 <Input type="select" name="internetReliability" id="internetReliability"
-                                       value={item.internetRealiability || `-`} onChange={this.handleChange}>
+                                       value={item.internetReliability || `-`} onChange={this.handleChange}>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
