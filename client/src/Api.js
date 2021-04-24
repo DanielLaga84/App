@@ -17,57 +17,44 @@ class Api {
         } : this.headers;
     }
 
-async
-getAll()
-{
-    return await fetch(this.BASE_URL, {
-        method: `GET`,
-        headers: this.createHeaders()
-    });
-}
+    async getAll() {
+        return fetch(this.BASE_URL, {
+            method: `GET`,
+            headers: this.createHeaders()
+        });
+    }
 
-async
-getById(id)
-{
-    return await fetch(`${this.BASE_URL}/${id}`, {
-        method: `GET`,
-        headers: this.createHeaders()
-    });
-}
-async
-delete (id)
-{
-    return await fetch(`${this.BASE_URL}/${id}`, {
-        method: `DELETE`,
-        headers: this.createHeaders()
-    });
-}
+    async getById(id) {
+        return fetch(`${this.BASE_URL}/${id}`, {
+            method: `GET`,
+            headers: this.createHeaders()
+        });
+    }
 
-async
-update(item)
-{
+    async delete(id) {
+        return fetch(`${this.BASE_URL}/${id}`, {
+            method: `DELETE`,
+            headers: this.createHeaders()
+        });
+    }
 
-    return await fetch(`${this.BASE_URL}/${item.id}`, {
-        method: 'PUT',
-        headers: this.createHeaders(),
-        body: JSON.stringify(item),
+    async update(item) {
 
-    });
-}
-async
-create(item)
-{
+        return fetch(`${this.BASE_URL}/${item.id}`, {
+            method: 'PUT',
+            headers: this.createHeaders(),
+            body: JSON.stringify(item),
 
-    return await fetch(this.BASE_URL, {
+        });
+    }
 
-        method: 'POST',
-
-        headers: this.createHeaders(),
-
-        body: JSON.stringify(item),
-    });
-
-}
+    async create(item) {
+        return fetch(this.BASE_URL, {
+            method: 'POST',
+            headers: this.createHeaders(),
+            body: JSON.stringify(item),
+        });
+    }
 }
 
 export default Api;
