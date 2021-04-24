@@ -7,7 +7,7 @@ import CoffeeShopEdit from './CoffeeShopEdit';
 import Api from './Api';
 import NavBar from './NavBar';
 
-const api = new Api;
+const api = new Api();
 
 class App extends Component {
 
