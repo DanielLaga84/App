@@ -4,21 +4,18 @@ class Api {
     }
 
     headers = {
-        `Accept`
-: `application/json`,
-`Content-type`: `application/json`
-};
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    };
 
-BASE_URL = `/api/coffeeshops`;
+    BASE_URL = '/api/coffeeshops';
 
-createHeaders()
-{
-    return this.authToken ? {
-        ...this.headers,
-        `Authorization` : `Bearer ` + this.authToken
-} :
-    this.headers;
-}
+    createHeaders() {
+        return this.authToken ? {
+            ...this.headers,
+            'Authorization': 'Bearer ' + this.authToken
+        } : this.headers;
+    }
 
 async
 getAll()
