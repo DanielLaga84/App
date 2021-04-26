@@ -11,7 +11,6 @@ class Home extends Component {
                 {this.props.navbar}
                 <Container fluid>
                     <div>
-
                         <Button color="secondary">
                             <Link className="app-link" to="/coffee-shops">Manage Coffee Shops</Link>
                         </Button>
