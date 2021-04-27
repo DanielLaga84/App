@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@okta/okta-react": "3.0.4",
     "bootstrap": "^4.6.0",
     "react-router-dom": "^5.2.0",
     "reactstrap": "^8.9.0"
